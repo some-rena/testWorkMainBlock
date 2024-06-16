@@ -27,6 +27,16 @@ string[] getArrayThreeSymbols(string[] inputArr)
     int lenArr = getLenghtNewArray(inputArr);
 
     string[] arrThreeSymbols = new string[lenArr];
+    int correntIndex = 0;
+    foreach (var item in inputArr)
+
+    {
+        if (item.Length <= 3)
+        {
+            arrThreeSymbols[correntIndex] = item;
+            correntIndex++;
+        }
+    }
     return arrThreeSymbols;
 }
 
