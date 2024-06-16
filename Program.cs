@@ -7,7 +7,6 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-using System.ComponentModel.DataAnnotations;
 
 int getLenghtNewArray(string[] arr)
 {
@@ -58,7 +57,9 @@ void printArray(string[] arraySymbols)
 
 }
 
-string[] array = { "Hello", "2", "world", ":-)" };
+//string[] array = { "Hello", "2", "world", ":-)" };
+//string[] array = { "“1234”", "“1567”", "-2", "computer science" };
+string[] array = { "Russia", "Denmark", "Kazan" };
 string[] arrayThreeSymbols = getArrayThreeSymbols(array);
 printArray(arrayThreeSymbols);
 
