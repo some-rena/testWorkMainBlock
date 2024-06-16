@@ -9,42 +9,30 @@
 
 using System.ComponentModel.DataAnnotations;
 
+int getLenghtNewArray(string[] arr)
+{
+    int len = 0;
+    foreach (var item in arr)
+    {
+        if (item.Length <= 3)
+        {
+            len++;
+        }
+    }
+    return len;
+}
+
+string[] getArrayThreeSymbols(string[] inputArr)
+{
+    int lenArr = getLenghtNewArray(inputArr);
+
+    string[] arrThreeSymbols = new string[lenArr];
+    return arrThreeSymbols;
+}
+
+
 string[] array = { "Hello", "2", "world", ":-)" };
-
-int len = 0;
-foreach (var item in array)
-{
-    if (item.Length <= 3)
-    {
-        len++;
-
-    }
-}
-string[] arrayThreeSymbols = new string[len];
-int correntIndex = 0;
-foreach (var item in array)
-{
-    if (item.Length <= 3)
-    {
-        arrayThreeSymbols[correntIndex] = item;
-        correntIndex++;
-    }
-}
-Console.Write("[");
-for (int i = 0; i < arrayThreeSymbols.Length; i++)
-{
-    if (i == arrayThreeSymbols.Length - 1)
-    {
-        Console.Write($"\"{arrayThreeSymbols[i]}\"");
-    }
-    else
-    {
-        Console.Write($"\"{arrayThreeSymbols[i]}\", ");
-    }
-}
-Console.Write("]");
-
-///
+string[] arrayThreeSymbols = getArrayThreeSymbols(array);
 
 
 
