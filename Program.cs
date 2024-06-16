@@ -40,9 +40,27 @@ string[] getArrayThreeSymbols(string[] inputArr)
     return arrThreeSymbols;
 }
 
+void printArray(string[] arraySymbols)
+{
+    Console.Write("[");
+    for (int i = 0; i < arraySymbols.Length; i++)
+    {
+        if (i == arraySymbols.Length - 1)
+        {
+            Console.Write($"\"{arraySymbols[i]}\"");
+        }
+        else
+        {
+            Console.Write($"\"{arraySymbols[i]}\", ");
+        }
+    }
+    Console.Write("]");
+
+}
 
 string[] array = { "Hello", "2", "world", ":-)" };
 string[] arrayThreeSymbols = getArrayThreeSymbols(array);
+printArray(arrayThreeSymbols);
 
 
 
